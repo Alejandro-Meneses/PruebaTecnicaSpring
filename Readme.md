@@ -32,7 +32,7 @@ cd Prueba-Tecnica
 ```bash
 docker-compose up --build
 ```
-# La aplicación estará disponible en http://localhost:8080 (Al ser una api no habra nada pero funcionara para los post y get)
+## La aplicación estará disponible en http://localhost:8080 (Al ser una api no habra nada pero funcionara para los post y get)
 
 ## API Endpoints
 En el archivo requests.http (Probados en intelliJ por comodidad en vez de Postman)
@@ -50,7 +50,7 @@ Uso de Docker Compose porque:
 - Comodidad
 
 #### 3. **Utilizar Lombok para constructores**
--Quitar codigo innecesario que al utilizar Lombok es mas comodo
+- Quitar codigo innecesario que al utilizar Lombok es mas comodo
 
 ### Plan Escabilidad
 
