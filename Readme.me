@@ -1,0 +1,67 @@
+# Prueba Técnica - Sistema de Gestión de Usuarios
+
+## Tecnologías Utilizadas
+
+- **Java 21**
+- **Spring Boot 3.5.7**
+- **Spring Security** - Autenticación y autorización
+- **Spring Data JPA** - Persistencia de datos
+- **PostgreSQL** - Base de datos relacional
+- **Lombok** - Reducción de código boilerplate
+- **BCrypt** - Encriptación de contraseñas
+- **Docker & Docker Compose** - Contenerización
+- **Maven** - Gestión de dependencias
+
+## Requisitos Previos
+
+- Java 21 o superior
+- Docker y Docker Compose
+- Maven 3.6+
+
+
+## Instalación y Ejecución
+
+### Opción 1: Usando Docker Compose
+
+```bash
+# Clonar el repositorio
+git clone <url-del-repositorio>
+cd Prueba-Tecnica
+
+# Ejecutar con Docker Compose
+docker-compose up --build
+
+# La aplicación estará disponible en http://localhost:8080(Al ser una api no habra nada pero funcionara para los post y get)
+
+## API Endpoints
+En el archivo requests.http (Probados en intelliJ por comodidad en vez de Postman)
+
+### Decisiones Técnicas
+
+#### 1. **BCrypt para Contraseñas**
+Encriptación de contraseñas con BCrypt porque:
+- Estándar de la industria
+- Resistente a ataques de fuerza bruta
+
+#### 2. **Docker**
+Uso de Docker Compose porque:
+- Reproducibilidad del entorno
+- Comodidad
+
+#### 3. **Utilizar Lombok para constructores**
+-Quitar codigo innecesario que al utilizar Lombok es mas comodo
+
+
+### Plan Escabilidad
+
+#### 1.Mejora en Testing
+Utilizacion de Junit y Mockito para un mejor testing
+
+#### 2.Un mejor manejo de errores
+Como por ejemplo DTOs específicos para respuestas de error
+
+#### 3.Seguridad mejorada
+Usar Jwt para la autenticación, usar rate limiting para mayor protección,
+ademas de usar HTTPS de forma obligatoria si esta en producción
+
+

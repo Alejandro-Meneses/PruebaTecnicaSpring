@@ -1,0 +1,30 @@
+### Variables
+@baseUrl = http://localhost:8080
+
+### 1. Crear usuario
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "username": "alejandro23",
+  "email": "meneses@example.com",
+  "password": "Alejandro123!"
+}
+
+### 2. Listar todos los usuarios
+GET {{baseUrl}}/users
+
+### 3. Obtener usuario por ID
+GET {{baseUrl}}/users/1
+
+### 4. Login
+POST {{baseUrl}}/users/auth/login
+Content-Type: application/json
+
+{
+  "username": "alejandro23",
+  "password": "Alejandro123!"
+}
+
+### 5. Eliminar usuario
+DELETE {{baseUrl}}/users/2
